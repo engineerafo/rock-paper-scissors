@@ -27,7 +27,9 @@ jobs:
       - name: Step 3 - Have Github Actions Build Maven Project
         run: 
          mvn -B package --file pom.xml
-         mkdir staging && cp target/*.jar staging
+         
+      - name: make directory
+        run: mkdir staging && cp target/*.jar staging
           
       - name: Step 4 - List the current directory
         run: ls -a
